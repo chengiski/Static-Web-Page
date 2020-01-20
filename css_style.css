@@ -1,0 +1,310 @@
+* {
+  	box-sizing: border-box;
+}
+
+body,html{
+	margin:auto;
+	padding:0;
+	height:100vh;
+}
+
+/*为了让整体居中*/
+html{
+	display:table;
+}
+body{
+	display:table-cell;
+	vertical-align:middle;
+    overflow-y:hidden;
+}
+/*固定导航栏div*/
+.navbar{
+	position:fixed;
+	background-color:white;
+	width:1026px;
+	height:74px;
+	z-index:1;
+}
+#MigiBell{
+	color:#482a7a;
+	font-size:23px;
+	font-style:italic;
+	position:relative;
+	top:5px;
+	left:135px;
+
+}
+.navbar a{
+	font-family:'Raleway',sans-serif;
+	font-weight:500;
+	font-size:14px;
+	color:#a0a09f;
+	position:relative;
+	top:-40px;
+	left:518px;
+	padding:0 9px;
+	text-decoration-line: none;
+}
+
+
+/*剩下内容整体的通用类*/
+.parallax {
+  perspective:1px;
+  transform-style:preserve-3d;
+  height:100%;
+  width:1043px;
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+/*给每一个div套一个wrapper，使得缩放不改变每个div的相对位置*/
+.wrapper{
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  width:1043px;
+  height:100%;
+}
+/*上层内容通用类*/
+.above_speed{
+	/*可以不写*/
+	transform:translateZ(0px) scale(1);
+	z-index:1;
+}
+/*底层背景速度类*/
+.below_speed_bg1{
+	transform:translateZ(-5px) scale(6);
+	z-index:-1;
+}
+.below_speed_bg2{
+	transform:translateZ(-1.1px) scale(2.1);
+	z-index:-1;
+}
+
+.bg1{
+	margin-top:-28px;
+ 	height:1050px;
+	background-image:url("image/coffee2.jpg");
+	background-repeat:no-repeat;
+	background-position:50% 15%;
+
+}
+.bg2{
+	margin-top:796px;
+ 	height:950px;
+	background-image:url("image/coffee1.jpg");
+	background-repeat:no-repeat;
+	background-position:50% 70%;
+
+}
+
+/*top white&face div*/
+.white{
+	margin-top:293px;
+	margin-left:266px;
+ 	height:274px;
+ 	width:509px;
+	background-color:white;
+}
+#face{
+	background-image:url("image/face.jpg");
+	background-repeat:no-repeat;
+	margin-top:-232px;
+	margin-left:300px;
+	background-position:center;
+	background-size:100%;
+ 	height:189px;
+ 	width:150px;
+}
+
+/*middle div*/
+#middle_blue{
+	margin-top:796px;
+ 	height:800px;
+ 	width:347px;
+	background:#5398b8;
+	background-position:center;
+}
+#middle_purple{
+	margin-top:-813px;
+	margin-left:347px;
+ 	height:800px;
+ 	width:347px;
+	background:#482a7a;
+}
+#middle_light_purple{
+	margin-top:-813px;
+	margin-left:694px;
+ 	height:800px;
+ 	width:349px;
+	background:#996cc0;
+}
+
+/*bottom div*/
+.bottom{
+	margin-top:2050px;
+ 	height:1020px;
+}
+#bottom1{
+ 	height:540px;
+	background:#482a7a;
+}
+#bottom2{
+ 	height:480px;
+	background:white;
+	position:relative;
+	top:-15px;
+}
+
+/*text style*/
+
+/*middle text*/
+#line1{
+	color:#482a7a;
+	font-size:16px;
+	font-style:italic;
+	position:relative;
+	top:41px;
+	left:208px;
+}
+#line2{
+	color:#482a7a;
+	font-size:37px;
+	font-family:'Raleway',sans-serif;
+	font-weight:500;
+	position:relative;
+	top:0;
+	left:208px;
+}
+#line3{
+	color:#482a7a;
+	font-size:49px;
+	font-family:'Raleway',sans-serif;
+	font-weight:700;
+	position:relative;
+	top:-59px;
+	left:208px;
+}
+#line4{
+	color:#482a7a;
+	font-size:68px;
+	font-weight:bold;
+	position:relative;
+	top:-174px;
+	left:208px;
+}
+#line5{
+	color:#482a7a;
+	font-family:'Raleway',sans-serif;
+	font-weight:500;
+	font-size:20px;
+	position:relative;
+	top:-210px;
+	left:208px;
+}
+
+/*middle text*/
+.middle_h{
+	color:white;
+	font-family:'Raleway',sans-serif;
+	font-weight:500;
+	font-size:13px;
+	position:relative;
+	top:355px;
+	left:40px;
+}
+.middle_p{
+	color:white;
+	font-family:'Raleway',sans-serif;
+	font-weight:700;
+	font-size:27px;
+	position:relative;
+	top:335px;
+	left:39px;
+}
+
+/*bottom text*/
+/*purple div text*/
+#bottom_small_white{
+	color:white;
+	font-size:15px;
+	position:relative;
+	top:145px;
+	left:115px;
+	font-family:'Raleway',sans-serif;
+	font-weight:700;
+}
+#bottom_large_white{
+	color:white;
+	font-size:40px;
+	position:relative;
+	top:120px;
+	left:120px;
+	font-family:'Raleway',sans-serif;
+}
+/*white div text*/
+#bottom_small_purple{
+	color:#482a7a;
+	font-size:15px;
+	position:relative;
+	top:110px;
+	left:110px;
+	font-family:'Raleway',sans-serif;
+	font-weight:700;
+}
+#bottom_large_purple{
+	color:#482a7a;
+	font-size:40px;
+	position:relative;
+	top:85px;
+	left:120px;
+	font-family:'Raleway',sans-serif;
+	font-weight:500;
+}
+.bottom_silm{
+	color:#482a7a;
+	font-size:12px;
+	position:relative;
+	top:48px;
+	left:120px;
+	font-family:'Raleway',sans-serif;
+	font-weight:500;
+}
+/*表单form*/
+#form{
+	position:relative;
+	top:-160px;
+	left:512px;
+	/*为了解决不设置height,在firefox中底端会出现一条白条的问题*/
+	/*这个height设置100px是为了不超过底端白色的框*/
+	height:100px;
+}
+input[type=text]{
+	width:392px;
+	height:12px;
+	padding:12px 10px;
+	margin:2.3px 0;
+	border:1px solid #482a7a;
+	border-radius: 1.3px;
+}
+input[type=submit]{
+    background-color:#482a7a;
+    color:white;
+    font-family:'Times New Roman',sans-serif;
+    font-style:italic;
+    font-size:17px;
+    border:none;
+    padding:6px 20px;
+    margin:4px 303px;
+}
+::placeholder{
+	color:#482a7a;
+	font-size:12px;
+	font-family:'Raleway',sans-serif;
+	font-weight:500;
+}
+#type{
+	height:104px;
+	padding:12px 13px 80px;
+}
